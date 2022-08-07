@@ -1,8 +1,15 @@
 import React from "react";
 import styles from "../styles/Location.module.scss";
+import { IconSearch } from "./assets";
 
 const Location = () => {
-  return <div>Location</div>;
+  return (
+    <div className={styles.container}>
+      <div className={styles.content}>
+        <p>87 Bandung, West Java, Indonesia</p>
+      </div>
+    </div>
+  );
 };
 
 export default Location;

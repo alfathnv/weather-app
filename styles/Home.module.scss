@@ -1,3 +1,26 @@
 .container {
-  max-width: 1280px;
+  min-width: 100%;
+  min-height: 100%;
+
+  background-image: linear-gradient(var(--blue), white);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .main {
+    width: 1280px;
+    min-height: 1000px;
+
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .left {
+      width: 70%;
+    }
+    .right {
+      width: 28%;
+    }
+  }
 }

@@ -1,0 +1,21 @@
+.container {
+  height: 100%;
+  max-height: 40px;
+
+  background-color: var(--light-blue);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .content {
+    width: 1280px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+
+    height: 100%;
+    color: white;
+  }
+}

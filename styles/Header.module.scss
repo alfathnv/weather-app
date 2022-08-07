@@ -1,12 +1,47 @@
 .container {
   height: 100%;
-  max-height: 100px;
+  max-height: 82px;
 
-  padding: 0 calc(1280px / 2);
   background-color: var(--blue);
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
   .content {
     width: 1280px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
     height: 100%;
+    color: white;
+
+    input {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+
+      border: none;
+      padding: 0.3em 2em;
+      height: 40px;
+      width: 400px;
+      border-radius: 50em;
+      text-align: center;
+
+      background-color: var(--light-blue);
+      opacity: 0.9;
+      color: white;
+
+      &::placeholder {
+        color: white;
+      }
+      &:-ms-input-placeholder {
+        color: white;
+      }
+    }
   }
 }

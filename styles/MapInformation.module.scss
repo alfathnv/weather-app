@@ -1,0 +1,32 @@
+.container {
+  width: 100%;
+  height: max-content;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  background-color: white;
+  padding: 1.5em;
+  border-radius: 1em;
+  h2 {
+    margin: 0;
+  }
+  .map {
+    background-color: black;
+    height: 300px;
+    width: 100%;
+    margin: 1.5em 0;
+  }
+  .button {
+    color: white;
+    background-color: #153ceb;
+
+    padding: 0.6em 1em;
+    border-radius: 50em;
+    p {
+      margin: 0;
+    }
+  }
+}

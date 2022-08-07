@@ -31,12 +31,14 @@ const datas = [
 const Navbar = () => {
   return (
     <div className={styles.container}>
-      {datas &&
-        datas.map((data, index) => (
-          <div key={index} className={styles.tab}>
-            {data.name}
-          </div>
-        ))}
+      <div className={styles.content}>
+        {datas &&
+          datas.map((data, index) => (
+            <div key={index} className={styles.tab}>
+              {data.name}
+            </div>
+          ))}
+      </div>
     </div>
   );
 };

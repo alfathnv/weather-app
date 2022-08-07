@@ -1,4 +1,7 @@
 import Head from "next/head";
+import ForecastCard from "../components/ForecastCard";
+import MapInformation from "../components/MapInformation";
+import WeatherCard from "../components/WeatherCard";
 import styles from "../styles/Home.module.scss";
 
 export default function Home() {
@@ -10,7 +13,16 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}></main>
+      <main className={styles.main}>
+        <div className={styles.left}>
+          <WeatherCard />
+          <ForecastCard />
+        </div>
+
+        <div className={styles.right}>
+          <MapInformation />
+        </div>
+      </main>
     </div>
   );
 }
