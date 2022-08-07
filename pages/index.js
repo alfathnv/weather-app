@@ -1,10 +1,30 @@
 import Head from "next/head";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 import ForecastCard from "../components/ForecastCard";
 import MapInformation from "../components/MapInformation";
 import WeatherCard from "../components/WeatherCard";
 import styles from "../styles/Home.module.scss";
 
 export default function Home() {
+  const [coordination, setCoordination] = useState({
+    lat: "",
+    long: "",
+  });
+  const router = useRouter();
+
+  useEffect(() => {
+    if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition(function (position) {
+        setCoordination({
+          lat: position.coords.latitude,
+          long: position.coords.logitude,
+        });
+      });
+    } else {
+    }
+  }, [router]);
+
   return (
     <div className={styles.container}>
       <Head>

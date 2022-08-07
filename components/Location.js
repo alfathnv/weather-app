@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "../styles/Location.module.scss";
-import { IconSearch } from "./assets";
 
 const Location = () => {
   return (
