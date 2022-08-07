@@ -24,3 +24,12 @@ a {
     background: black;
   }
 }
+
+#__next {
+  height: 100vh;
+  width: 100vw;
+}
+
+:root {
+  --blue: #34446a;
+}
