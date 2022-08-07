@@ -1,13 +1,14 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import { getCurrentWeather } from "../components/api";
 import ForecastCard from "../components/ForecastCard";
 import MapInformation from "../components/MapInformation";
 import WeatherCard from "../components/WeatherCard";
 import styles from "../styles/Home.module.scss";
 
 export default function Home() {
-  const [coordination, setCoordination] = useState({
+  const [coordinates, setCoordinates] = useState({
     lat: "",
     long: "",
   });
@@ -16,14 +17,24 @@ export default function Home() {
   useEffect(() => {
     if ("geolocation" in navigator) {
       navigator.geolocation.getCurrentPosition(function (position) {
-        setCoordination({
+        setCoordinates({
           lat: position.coords.latitude,
-          long: position.coords.logitude,
+          long: position.coords.longitude,
         });
       });
     } else {
     }
   }, [router]);
+
+  useEffect(() => {
+    if (coordinates.lat === "" || coordinates.long === "") return;
+
+    const fetchData = async () => {
+      const aw = await getCurrentWeather(coordinates.lat, coordinates.long);
+      return console.log(aw);
+    };
+    fetchData();
+  }, [coordinates]);
 
   return (
     <div className={styles.container}>
